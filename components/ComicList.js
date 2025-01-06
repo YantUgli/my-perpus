@@ -1,5 +1,5 @@
 'use client'
-import scrapeAnimeList from '@/app/services/scrapeAnimeList';
+import scrapeAnimeList from '@/services/scrapeAnimeList';
 import { useEffect, useState } from 'react';
 
 export default function ComicList({ komikList }) {

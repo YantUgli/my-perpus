@@ -1,6 +1,6 @@
 'use client'
 
-import KemdikbudBook from '@/app/services/KemdikbudBook';
+import KemdikbudBook from '@/services/KemdikbudBook';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
