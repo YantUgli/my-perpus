@@ -1,14 +1,14 @@
 // app/page.js
 import BookList from '@/components/BookList';
-import ComicList from '@/components/ComicList';
+// import ComicList from '@/components/ComicList';
 import Navbar from '@/components/Navbar';
-import scrapeAnimeList from '../services/scrapeAnimeList';
+// import scrapeAnimeList from '../services/scrapeAnimeList';
 
 export default async function Home() {
   // Mengambil data anime di server-side dengan async function
-  const animeList = await scrapeAnimeList();
-  console.log(animeList);
-  const serializedKomikList = JSON.parse(JSON.stringify(animeList));
+  // const animeList = await scrapeAnimeList();
+  // console.log(animeList);
+  // const serializedKomikList = JSON.parse(JSON.stringify(animeList));
 
 
   return (
