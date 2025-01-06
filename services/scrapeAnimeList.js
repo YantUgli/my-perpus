@@ -2,10 +2,15 @@ import axios from 'axios';
 // import cheerio from 'cheerio';
 // import cheerio from 'cheerio';
 import { load } from 'cheerio';
+import { isProduction } from 'utils/environment';
 
 
 // Service untuk scraping data anime dari Samehadaku
 const scrapeAnimeList = async () => {
+    if (!isProduction()) {
+        // Skip scraping jika tidak dalam mode produksi (misalnya, saat build)
+        return [];
+    }
     try {
         // const url = 'https://samehadaku.ws/';
         const url = 'https://komikindo.cafe/';
