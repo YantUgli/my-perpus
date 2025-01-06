@@ -15,7 +15,7 @@ export default async function Home() {
     <div className='font-Poppins'>
       <Navbar />
       <BookList />
-      <ComicList komikList={serializedKomikList} />
+      {/* <ComicList komikList={serializedKomikList} /> */}
     </div>
   );
 }
