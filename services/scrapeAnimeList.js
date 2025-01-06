@@ -2,7 +2,7 @@ import axios from 'axios';
 // import cheerio from 'cheerio';
 // import cheerio from 'cheerio';
 import { load } from 'cheerio';
-import { isProduction } from 'utils/environment';
+import { isProduction } from '@/utils/environment';
 
 
 // Service untuk scraping data anime dari Samehadaku
