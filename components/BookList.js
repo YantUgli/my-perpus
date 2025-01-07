@@ -44,7 +44,7 @@ export default function BookList() {
     console.log(books)
 
     return (
-        <div className="container mx-auto p-6 mt-16">
+        <div className="container mx-auto p-6 mt-10">
             <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Daftar Buku</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {books.map((book) => (
@@ -62,7 +62,6 @@ export default function BookList() {
                     </div>
                 ))}
             </div>
-            <img src='https://static.buku.kemdikbud.go.id/content/image/coverteks/coverkurikulum21/Seni_Musik_BG_KLS_I_Rev_Cover.png' />
         </div>
     );
 }

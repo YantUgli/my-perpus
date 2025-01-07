@@ -1,12 +1,31 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        // Fungsi untuk memeriksa posisi scroll
+        const handleScroll = () => {
+            if (window.scrollY > 50) { // Jika scroll lebih dari 50px, navbar diberi background
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        // Menambahkan event listener untuk scroll
+        window.addEventListener("scroll", handleScroll);
+
+        // Menghapus event listener saat komponen unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <nav className="bg-[#183D3D] fixed top-0 left-0 w-full z-10 pt-2">
+        <nav className={`fixed top-0 left-0 w-full z-10 pt-2 transition-all duration-300 ${isScrolled ? 'bg-[#183D3D]' : 'bg-transparent'}`}>
             <div className="container mx-auto max-w-[1024px] flex justify-between items-center px-4">
                 {/* Logo */}
                 {/* <img
@@ -21,7 +40,7 @@ export default function Navbar() {
                 {/* Link Navigation */}
                 <div className="flex gap-6">
                     <a href="#" className="text-white hover:text-gray-300">Home</a>
-                    <a href="#" className="text-white hover:text-gray-300">Ranking</a>
+                    {/* <a href="#" className="text-white hover:text-gray-300">Ranking</a> */}
                     <a href="#" className="text-white hover:text-gray-300">Favorite</a>
                     <a href="#" className="text-white hover:text-gray-300">About</a>
                 </div>
@@ -31,7 +50,7 @@ export default function Navbar() {
                     <form className="flex items-center" action="#" method="GET">
                         <input
                             type="text"
-                            placeholder="Cari komik..."
+                            placeholder="Cari Buku..."
                             name="search"
                             className="py-2 px-4 w-full max-w-[200px] border border-gray-300 rounded-l-md focus:outline-none"
                         />

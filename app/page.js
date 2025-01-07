@@ -1,5 +1,6 @@
 // app/page.js
 import BookList from '@/components/BookList';
+import Hero from '@/components/Hero';
 // import ComicList from '@/components/ComicList';
 import Navbar from '@/components/Navbar';
 // import scrapeAnimeList from '../services/scrapeAnimeList';
@@ -14,6 +15,7 @@ export default async function Home() {
   return (
     <div className='font-Poppins'>
       <Navbar />
+      <Hero />
       <BookList />
       {/* <ComicList komikList={serializedKomikList} /> */}
     </div>
