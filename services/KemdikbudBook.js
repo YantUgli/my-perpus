@@ -4,7 +4,8 @@ import axios from 'axios';
 const KemdikbudBook = async () => {
     try {
         // URL API buku
-        const url = 'https://api.buku.cloudapp.web.id/api/catalogue/getPenggerakTextBooks?limit=10&type_pdf&order_by=updated_at';
+        // const url = 'https://api.buku.cloudapp.web.id/api/catalogue/getPenggerakTextBooks?limit=10&type_pdf&order_by=updated_at';
+        const url = 'https://gutendex.com/books';
 
         // Mengirimkan request ke API
         const { data } = await axios.get(url);
