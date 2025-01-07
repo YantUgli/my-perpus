@@ -77,7 +77,7 @@ export default function Page() {
                 </form>
                 <p className="text-sm text-gray-600 text-center mt-4">
                     Belum punya akun?{" "}
-                    <a className="text-blue-500 hover:underline">Daftar di sini</a>
+                    <a href='/register' className="text-blue-500 hover:underline">Daftar di sini</a>
                 </p>
             </div>
         </div>

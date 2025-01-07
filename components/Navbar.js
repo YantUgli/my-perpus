@@ -32,7 +32,7 @@ export default function Navbar() {
         localStorage.removeItem("isLoggedIn"); // Menghapus status login
         router.push("/login"); // Mengarahkan pengguna ke halaman login
     };
-    console.log(currentPath)
+    // console.log(currentPath)
     return (
         <nav className={`fixed top-0 left-0 w-full z-10 pt-2 transition-all duration-300 ${isScrolled ? 'bg-[#183D3D]' : 'bg-transparent'}`}>
             <div className="container mx-auto max-w-[1024px] flex justify-between items-center px-4">
@@ -49,10 +49,10 @@ export default function Navbar() {
                         Home
                     </Link>
                     <a
-                        href="/about"
-                        className={`text-white hover:text-gray-300 ${currentPath == '/about' ? 'text-yellow-500' : ''}`}
+                        href="/profile"
+                        className={`text-white hover:text-gray-300 ${currentPath == '/profile' ? 'text-yellow-500' : ''}`}
                     >
-                        About
+                        Profile
                     </a>
                 </div>
 

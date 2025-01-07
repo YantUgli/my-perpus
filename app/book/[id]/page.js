@@ -9,12 +9,12 @@ export default function Page({ params }) {
   // Dummy data buku (bisa diubah dengan data dinamis dari API)
   const book = {
     id: 1,
-    title: "Belajar Pemrograman dengan React",
+    title: "Dandadan",
     author: "John Doe",
     year: 2023,
-    image: "/img/buku.jpg",
+    image: "/img/dandadan.jpg",
     description:
-      "Buku ini memberikan panduan lengkap untuk mempelajari React, salah satu library JavaScript paling populer untuk membangun aplikasi web modern.",
+      "Momo Ayase adalah seorang gadis SMA yang percaya pada hantu tetapi tidak percaya pada alien, sedangkan temannya Ken Takakura percaya pada alien tetapi tidak percaya pada hantu. Dalam sebuah taruhan untuk menentukan siapa yang benar, keduanya memutuskan untuk secara terpisah mengunjungi lokasi yang berhubungan dengan okultisme dan supranatural. Ayase mengunjungi lokasi pertama, dan Takakura mengunjungi lokasi kedua. Ayase diculik oleh sekelompok alien yang secara tidak sengaja membuka chakra-nya, sehingga mengaktifkan kemampuan psikis yang terpendam. Sementara itu, Takakura dirasuki oleh roh yang mengambil alih tubuhnya. Dengan menggunakan kemampuan Ayase dan Takakura yang dirasuki, mereka mengalahkan para alien bersama-sama.",
   };
 
   return (
@@ -47,15 +47,23 @@ export default function Page({ params }) {
             <h1 className="text-3xl font-bold text-gray-800">{book.title}</h1>
             <p className="text-gray-600 mt-2">Penulis: {book.author}</p>
             <p className="text-gray-500">Tahun Terbit: {book.year}</p>
-            <p className="mt-4 text-gray-700">{book.description}</p>
+            <p className="mt-4 text-gray-700">Sinopsis {book.description}</p>
 
             {/* Tombol Kembali */}
-            <button
-              onClick={() => router.push('/books')}
-              className="mt-6 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
-            >
-              Kembali ke Daftar Buku
-            </button>
+            <div className="flex gap-16">
+              <button
+                onClick={() => router.push('/')}
+                className="mt-6 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
+              >
+                Kembali ke Daftar Buku
+              </button>
+              <button
+                onClick={() => router.push('/')}
+                className="mt-6 bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition"
+              >
+                Baca Buku Sekarang!
+              </button>
+            </div>
           </div>
         </div>
       </div>

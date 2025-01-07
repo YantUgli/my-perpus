@@ -90,7 +90,7 @@ export default function page() {
                 <p className="text-sm text-gray-600 text-center mt-4">
                     Sudah punya akun?{" "}
 
-                    <a className="text-blue-500 hover:underline">Login di sini</a>
+                    <a href='/login' className="text-blue-500 hover:underline">Login di sini</a>
 
                 </p>
             </div>

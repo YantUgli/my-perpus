@@ -48,7 +48,7 @@ export default function BookList() {
             <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Daftar Buku</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {books.map((book) => (
-                    <div key={book.id} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition hover:translate-y-3 hover:bg-blue-100"
+                    <div key={book.id} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition hover:-translate-y-3 hover:bg-blue-100"
                         onClick={() => router.push(`/book/${book.id}`)}
                     >
                         <img
